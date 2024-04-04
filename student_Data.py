@@ -52,4 +52,7 @@ def showAll():
 def showOnlyName():
     for person in Students.values():
         print(person["name"])
+def showOnlyAge():
+    for personAge in Students.values():
+        print(personAge["age"])
 
