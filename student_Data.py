@@ -18,15 +18,15 @@ Students = {
     "Stud3": {
     "name": "Mosope Ihejiawu",
     "age": 14,
-    "best_subject": "",
-    "subject_weakness": "",
+    "best_subject": "Mathematics",
+    "subject_weakness": "Biology",
     "score": ""
     },
     "Stud4": {
     "name": "Monachi Ihejiawu",
     "age": 12,
-    "best_subject": "",
-    "subject_weakness": "",
+    "best_subject": "Mathematics",
+    "subject_weakness": "History",
     "score": ""
     },
     "Stud5": {
@@ -50,9 +50,21 @@ def showAll():
         print((Students[i]))
 
 def showOnlyName():
+    print("")
     for person in Students.values():
         print(person["name"])
 def showOnlyAge():
+    print("")
     for personAge in Students.values():
         print(personAge["age"])
 
+def showOnlyBestSub():
+    print("")
+    for bestSubject in Students.values():
+        print(bestSubject["best_subject"])
+
+
+def showWeakSub():
+    print("")
+    for weakSubject in Students.values():
+        print(weakSubject["subject_weakness"])

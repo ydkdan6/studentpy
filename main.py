@@ -4,3 +4,5 @@ result = student_Data
 result.showAll()
 result.showOnlyName()
 result.showOnlyAge()
+result.showOnlyBestSub()
+result.showWeakSub()
