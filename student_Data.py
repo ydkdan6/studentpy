@@ -6,21 +6,21 @@ Students = {
     "age": 15,
     "best_subject": "Mathematics",
     "subject_weakness": "Physics",
-    "score": ""
+    "score": 95
     },
     "Stud2": {
     "name": "David Godwin",
     "age": 10,
     "best_subject": "English Language",
     "subject_weakness": "Cultural Science",
-    "score": ""
+    "score": 70
     },
     "Stud3": {
     "name": "Mosope Ihejiawu",
     "age": 14,
     "best_subject": "Mathematics",
     "subject_weakness": "Biology",
-    "score": ""
+    "score": 89
     },
     "Stud4": {
     "name": "Monachi Ihejiawu",
@@ -34,18 +34,19 @@ Students = {
     "age": 25,
     "best_subject": "Literature",
     "subject_weakness": "Mathematics",
-    "score": ""
+    "score": 76
     },
     "Stud6": {
     "name": "Bella Godwin",
     "age": 12,
     "best_subject": "Biology",
     "subject_weakness": "Chemistry",
-    "score": ""
+    "score": 90
     }
 }
 
 def showAll():
+    print("The Total number is :", countStudent())
     for i in Students:
         print((Students[i]))
 
@@ -68,3 +69,25 @@ def showWeakSub():
     print("")
     for weakSubject in Students.values():
         print(weakSubject["subject_weakness"])
+
+def countStudent():
+    total = len(Students)
+    print(total)
+
+def AddNewStud(name, age, bestSub, subjectW, score):
+    global Students
+
+    student_key = "Stud" + str(len(Students)+1)
+
+    new_student = {
+        "name": name,
+        "age": age,
+        "bestSub": bestSub,
+        "subjectW": subjectW,
+        "score": score
+    }
+
+    Students[student_key] = new_student
+
+    print(f"The name: {name} has been added to the Student Mgt")
+     
